@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Safe Content</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="init()">
+    <header>
+        <h1>Safe Content</h1>
+        <button class="btn-login" onclick="enterLoginSidebar()">Login</button>
+        <span></span>
+        <button class="btn-logout" onclick="doLogout()">Logout</button>
+    </header>
+    <div class="login-sidebar">
+        <h5>Username:</h5>
+        <div><input type="text" id="username" onclick="clearInvalid('username')"/></div>
+        <h5>Password:</h5>
+        <div>
+            <input type="password" id="password" onclick="clearInvalid('password')"/>
+            <button class="btn-show-password" onmousedown="showPasswordToggle(true)" onmouseup="showPasswordToggle(false)"></button>
+        </div>
+
+        <!-- <div id="input-outer">
+            <input type="password" id="password" onmouseover="goo(true)" onmouseout="goo(false)"/>
+            <div id="clear" onclick="foo()">
+                X
+            </div>
+            <button class="btn-show-password" onmousedown="showPasswordToggle(true)" onmouseup="showPasswordToggle(false)"></button>
+        </div> -->
+        <br />
+        <button class="btn-submit-login" onclick="submitLogin()">LOGIN</button>
+    </div>
+
+    <!-- <a href="admin.html" class="admin-link">admin.html</a> -->
+    <div class="admin-frame">
+        <!-- <iframe src="admin.html" class="admin-link"></iframe> -->
+    </div>
+
+
+
+    <script src="js/service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

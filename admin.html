@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin's Section</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body onload="adminInit()">
+
+    <a href="index.html">Back To index.html</a>
+
+    <h2>Users: <span><select id="users-sorter" onchange="sortUsersBy(this.value)">
+                <option value="" disabled selected hidden>Sort By:</option>
+                <option value="username">Username</option>
+                <option value="login">Last Login</option>
+            </select></span>
+        <!-- <span><select id="view-selector" onchange="viewUsersBy(this.value)">
+            <option value="table" disabled selected hidden>View:</option>
+            <option value="table">Table</option>
+            <option value="cards">Cards</option>
+            </select></span> -->
+        <button class="btns-change-view" id="btn-to-cards-view" onclick="viewUsersBy('cards');viewBtnsPressed(this)" value="cards">&#8759;</button><button class="btns-change-view pressed" id="btn-to-table-view" onclick="viewUsersBy('table');viewBtnsPressed(this)" value="table">&#8801;</button></h2>
+
+    <table class="table-view" border="1">
+        <thead>
+            <tr>
+                <td>Username</td>
+                <td>Password</td>
+                <td>Type</td>
+                <td>Last Login Timestamp</td>
+            </tr>
+        </thead>
+        <tbody class="users-table">
+
+        </tbody>
+    </table>
+
+    <div class="cards-view">
+
+    </div>
+
+    <script src="js/service.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+.login-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 300px;
+    background-color: rgba(98, 96, 194, 0);
+    top: 50px;
+    right: 0;
+    height: 30%;
+    transition: 1s;
+    transform: translateX(300px);
+
+    text-align: center;
+}
+
+.login-sidebar.open {
+    background-color: rgba(98, 96, 194, 0.8);
+    transform: translateX(0);
+}
+
+.login-sidebar h5 {
+    margin: 5px;
+}
+
+.login-sidebar input {
+    height: 2em;
+    border: 0px;
+    outline: none;
+    margin: auto;
+    border-radius: 20px;
+    color: #666;
+    text-align: center;
+}
+
+.login-sidebar input.invalid {
+    border: 1px solid red;
+}
+
+.login-sidebar input:focus {
+    background: wheat;
+}
+
+.btn-show-password {
+    background: url(../img/show-password-btn.png) no-repeat;
+    background-color: lavender;
+    height: 20px;
+    width: 24px;
+    background-origin: center;
+    border-radius: 50%;
+    margin: 5px 10px;
+    position: fixed;
+}
+.btn-show-password:active {
+    background: url(../img/hide-password-btn.png);
+    background-color: lavender;
+}
+.btn-logout,
+.btn-login {
+    height: 50%;
+    background-color: rgba(98, 96, 194, 0.8);
+    color: white;
+    border: 0;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.btn-logout {
+    display: none;
+    justify-self: flex-end;
+    order: 3;
+}
+
+.btn-login:hover {
+    background-color: rgba(111, 109, 238, 0.8);
+}
+
+.btn-login:active {
+    background-color: rgba(250, 250, 250, 0.8);
+    color: black;
+}
+
+.btn-submit-login {
+    background-color: lemonchiffon;
+    border: 0;
+    border-radius: 5%;
+    /* margin-top: 20px; */
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1% 2%;
+}
+
+.btn-submit-login:hover {
+    background-color: rgb(255, 243, 137);
+}
+
+.btn-submit-login:active {
+    background-color: rgb(243, 227, 81);
+}
+
+/*
+ @media (min-width: 992px) {
+    .login-sidebar {
+        background-color: rgba(98, 96, 194, 0.8);
+        transform: translateX(0);
+    }
+}
+*/
